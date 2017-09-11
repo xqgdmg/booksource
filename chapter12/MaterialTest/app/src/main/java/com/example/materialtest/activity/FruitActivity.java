@@ -1,4 +1,4 @@
-package com.example.materialtest;
+package com.example.materialtest.activity;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.materialtest.R;
 
 public class FruitActivity extends AppCompatActivity {
 
@@ -26,16 +27,16 @@ public class FruitActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String fruitName = intent.getStringExtra(FRUIT_NAME);
         int fruitImageId = intent.getIntExtra(FRUIT_IMAGE_ID, 0);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         ImageView fruitImageView = (ImageView) findViewById(R.id.fruit_image_view);
         TextView fruitContentText = (TextView) findViewById(R.id.fruit_content_text);
-        setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-        collapsingToolbar.setTitle(fruitName);
+//        collapsingToolbar.setTitle(fruitName);
         Glide.with(this).load(fruitImageId).into(fruitImageView);
         String fruitContent = generateFruitContent(fruitName);
         fruitContentText.setText(fruitContent);

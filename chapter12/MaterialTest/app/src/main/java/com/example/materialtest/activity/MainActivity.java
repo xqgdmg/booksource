@@ -1,4 +1,4 @@
-package com.example.materialtest;
+package com.example.materialtest.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -16,6 +16,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.materialtest.bean.Fruit;
+import com.example.materialtest.adapter.FruitAdapter;
+import com.example.materialtest.R;
 
 import java.util.ArrayList;
 import java.util.List;

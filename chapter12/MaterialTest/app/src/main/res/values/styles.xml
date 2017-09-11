@@ -11,4 +11,8 @@
     <style name="FruitActivityTheme" parent="AppTheme">
     </style>
 
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+
 </resources>

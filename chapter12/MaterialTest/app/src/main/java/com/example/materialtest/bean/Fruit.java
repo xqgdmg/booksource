@@ -1,4 +1,4 @@
-package com.example.materialtest;
+package com.example.materialtest.bean;
 
 public class Fruit {
 

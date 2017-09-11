@@ -1,4 +1,4 @@
-package com.example.materialtest;
+package com.example.materialtest.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.materialtest.R;
+import com.example.materialtest.activity.FruitActivity;
+import com.example.materialtest.activity.FruitActivity2;
+import com.example.materialtest.bean.Fruit;
 
 import java.util.List;
 
@@ -51,7 +55,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>{
             public void onClick(View v) {
                 int position = holder.getAdapterPosition();
                 Fruit fruit = mFruitList.get(position);
-                Intent intent = new Intent(mContext, FruitActivity.class);
+                Intent intent = new Intent(mContext, FruitActivity2.class);
                 intent.putExtra(FruitActivity.FRUIT_NAME, fruit.getName());
                 intent.putExtra(FruitActivity.FRUIT_IMAGE_ID, fruit.getImageId());
                 mContext.startActivity(intent);
